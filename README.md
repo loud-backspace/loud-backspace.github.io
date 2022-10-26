@@ -1,3 +1,2 @@
-# Loud Backspace Landing Page
-
-Separate repository for https://github.com/lprather/loud-backspace
+### Team Loud Backspace's Senior Project
+- Stuff goes here
