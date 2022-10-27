@@ -225,7 +225,8 @@ body #home .home-main .right img {
 body #home i {
   font-size: 3rem;
   color: #333;
-  margin-top: 100px;
+  margin-top: 50px;
+  padding-bottom: 20px;
   -webkit-animation: downarrow 1.5s;
           animation: downarrow 1.5s;
   -webkit-animation-iteration-count: infinite;
