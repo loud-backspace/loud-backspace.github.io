@@ -106,6 +106,9 @@ body {
         top: 0;
         z-index: 5;
         overflow: hidden;
+        box-shadow: 1px 6px 7px -6px rgba(0,0,0,0.41);
+        -webkit-box-shadow: 1px 6px 7px -6px rgba(0,0,0,0.41);
+        -moz-box-shadow: 1px 6px 7px -6px rgba(0,0,0,0.41);
         img {
             display: flex;
             height: 50px;
@@ -214,6 +217,7 @@ body {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        padding-top: 50px;
         padding-bottom: 100px;
         h1 {
             text-align: center;
@@ -274,7 +278,6 @@ body {
     }
     #features {
         background: #e6d68c;
-        padding-top: 50px;
     }
     #about {
         background: $beige;
@@ -283,6 +286,7 @@ body {
         display: flex;
         background: #e6d68c;
         width: 100%;
+        padding-bottom: 150px;
         .container {
             display: flex;
             form {
@@ -349,7 +353,8 @@ body {
                     textarea {
                         margin-top: 10px;
                         resize: vertical;
-                        max-height: 300px;
+                        max-height: 350px;
+                        min-height: 100px;
                     }
                 }
             }
