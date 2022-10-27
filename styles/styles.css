@@ -70,6 +70,26 @@
     opacity: 0;
   }
 }
+/* Works on Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #34A2B8 #f5e59f;
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #f5e59f;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #34A2B8;
+  border-radius: 10px;
+}
+
 .fadeInUp {
   opacity: 1;
   animation-name: fadeInUp;
@@ -85,10 +105,16 @@
 }
 
 .container {
-  margin-left: 60px;
-  margin-right: 60px;
+  margin: 0 auto;
+  width: 80%;
 }
 
+@media screen and (max-width: 480px) {
+  .container {
+    margin: 0 auto;
+    width: 95%;
+  }
+}
 .navbar-brand img {
   height: 40px;
 }
@@ -168,33 +194,21 @@ body #home .home-main .left h1 {
   font-size: 6rem;
   color: #222;
 }
-body #home .home-main .left #learn-more {
-  border: 3px solid #35827C;
-  border-radius: 12px;
-  padding: 20px;
-  color: #444;
-  font-size: 1.5rem;
-  transition: 0.2s;
-}
-body #home .home-main .left #learn-more:hover {
-  background: #34A2B8;
-  color: white;
-  transition: 0.2s;
-  margin-bottom: 15px;
-}
-body #home .home-main .left a {
-  padding: 20px;
-  font-size: 1.7rem;
-  color: #34A2B8;
+body #home .home-main .left #learnmore {
   border: 4px solid #34A2B8;
   border-radius: 12px;
+  padding: 20px;
+  color: #34A2B8;
+  font-size: 1.5rem;
   transition: 0.2s;
+  padding: 15px;
 }
-body #home .home-main .left a:hover {
+body #home .home-main .left #learnmore:hover {
   background: #34A2B8;
   color: white;
-  border: 4px solid black;
   transition: 0.2s;
+  margin-bottom: 10px;
+  border: 4px solid #333;
 }
 body #home .home-main .right {
   width: 50%;
@@ -216,6 +230,9 @@ body #home i {
           animation: downarrow 1.5s;
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
+}
+body #home a {
+  overflow: hidden;
 }
 body #features, body #about, body #contact {
   width: 100%;
@@ -292,64 +309,62 @@ body #about {
 body #contact {
   display: flex;
   background: #e6d68c;
-  width: 100%;
   padding-bottom: 150px;
 }
-body #contact .container {
+body #contact form {
   display: flex;
+  justify-content: space-around;
+  width: 50%;
 }
-body #contact .container form {
-  display: flex;
-}
-body #contact .container form i {
+body #contact form i {
   font-size: 1.6rem;
 }
-body #contact .container form #form-details {
+body #contact form #form-details {
   width: 30%;
   display: flex;
   flex-direction: column;
 }
-body #contact .container form #form-details .location, body #contact .container form #form-details .email, body #contact .container form #form-details .phone, body #contact .container form #form-details .website, body #contact .container form #form-details .warning {
+body #contact form #form-details .location, body #contact form #form-details .email, body #contact form #form-details .phone, body #contact form #form-details .website, body #contact form #form-details .warning {
   display: flex;
   align-items: center;
   margin-bottom: 8px;
 }
-body #contact .container form #form-details .location p, body #contact .container form #form-details .location a, body #contact .container form #form-details .email p, body #contact .container form #form-details .email a, body #contact .container form #form-details .phone p, body #contact .container form #form-details .phone a, body #contact .container form #form-details .website p, body #contact .container form #form-details .website a, body #contact .container form #form-details .warning p, body #contact .container form #form-details .warning a {
+body #contact form #form-details .location p, body #contact form #form-details .location a, body #contact form #form-details .email p, body #contact form #form-details .email a, body #contact form #form-details .phone p, body #contact form #form-details .phone a, body #contact form #form-details .website p, body #contact form #form-details .website a, body #contact form #form-details .warning p, body #contact form #form-details .warning a {
   margin: 0 10px;
   color: #444;
 }
-body #contact .container form #form-details .fa-map-location-dot {
+body #contact form #form-details .fa-map-location-dot {
   color: rgba(255, 0, 0, 0.73);
 }
-body #contact .container form #form-details .fa-envelope-open-text {
+body #contact form #form-details .fa-envelope-open-text {
   color: #34A2B8;
 }
-body #contact .container form #form-details .fa-mobile-screen {
+body #contact form #form-details .fa-mobile-screen {
   color: #222;
 }
-body #contact .container form #form-details .fa-up-right-from-square {
+body #contact form #form-details .fa-up-right-from-square {
   color: #2E933C;
 }
-body #contact .container form #form-details .fa-warning {
+body #contact form #form-details .fa-warning {
   color: rgb(255, 0, 55);
   -webkit-animation: fadeInOut 1.5s;
           animation: fadeInOut 1.5s;
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
 }
-body #contact .container form #form-details .website a {
+body #contact form #form-details .website a {
   text-decoration: underline;
 }
-body #contact .container form #form-details .warning {
+body #contact form #form-details .warning {
   margin-top: 40px;
 }
-body #contact .container form #form-message {
+body #contact form #form-message {
   display: flex;
   flex-direction: column;
   width: 70%;
   width: 600px;
 }
-body #contact .container form #form-message input, body #contact .container form #form-message textarea {
+body #contact form #form-message input, body #contact form #form-message textarea {
   background: transparent;
   outline: none;
   border: 3px solid white;
@@ -358,10 +373,10 @@ body #contact .container form #form-message input, body #contact .container form
   padding: 10px;
   color: #333;
 }
-body #contact .container form #form-message input:focus, body #contact .container form #form-message textarea:focus {
+body #contact form #form-message input:focus, body #contact form #form-message textarea:focus {
   border: 3px solid #81C14B;
 }
-body #contact .container form #form-message textarea {
+body #contact form #form-message textarea {
   margin-top: 10px;
   resize: vertical;
   max-height: 350px;
@@ -369,18 +384,49 @@ body #contact .container form #form-message textarea {
 }
 
 @media only screen and (max-width: 1200px) {
-  img, .navbar {
-    display: none;
+  * {
+    overflow-x: hidden;
+  }
+  #nav-links {
+    display: none !important;
+  }
+  #learnmore {
+    margin-top: 30px;
+  }
+  .feature {
+    margin: 0 !important;
   }
   #home .left {
-    width: 100%;
+    margin-top: 40px;
+    width: 100% !important;
+    justify-content: center !important;
+    text-align: center !important;
   }
   #home .left h1 {
-    text-align: center;
-    font-size: 2rem;
+    margin: 0 10px !important;
+    text-align: center !important;
+    font-size: 3rem !important;
   }
   #home .right {
+    display: none !important;
     width: 0%;
+  }
+  #features i {
+    margin-top: 10px !important;
+  }
+  #contact {
+    justify-content: center;
+  }
+  #contact form {
+    width: 92% !important;
+    display: flex;
+    flex-direction: column;
+  }
+  #contact form #form-details, #contact form #form-message {
+    width: 100% !important;
+  }
+  #contact form #form-details .warning {
+    margin: 20px 0 !important;
   }
 }
 footer {

@@ -70,6 +70,26 @@ $darkblue: #35827C;
     }
 }
 
+/* Works on Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: $blue $beige;
+  }
+  
+  /* Works on Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 12px;
+  }
+  
+  *::-webkit-scrollbar-track {
+    background: $beige;
+  }
+  
+  *::-webkit-scrollbar-thumb {
+    background-color: $blue;
+    border-radius: 10px;
+  }
+
 .fadeInUp {
     opacity: 1;
     animation-name: fadeInUp;
@@ -83,8 +103,15 @@ $darkblue: #35827C;
     width: 100%;
 }
 .container {
-    margin-left: 60px;
-    margin-right: 60px;
+    margin: 0 auto;
+    width: 80%;
+  }
+  
+@media screen and (max-width: 480px) {
+    .container {
+        margin: 0 auto;
+        width: 95%;
+    }
 }
 .navbar-brand {
     img {
@@ -162,32 +189,20 @@ body {
                     font-size: 6rem;
                     color: #222;
                 }
-                #learn-more {
-                    border: 3px solid $darkblue;
-                    border-radius: 12px;
-                    padding: 20px;
-                    color: #444;
-                    font-size: 1.5rem;
-                    transition: 0.2s;
-                    &:hover {
-                        background: $blue;
-                        color: white;
-                        transition: 0.2s;
-                        margin-bottom: 15px;
-                    }
-                }
-                a {
-                    padding: 20px;
-                    font-size: 1.7rem;
-                    color:$blue;
+                #learnmore {
                     border: 4px solid $blue;
                     border-radius: 12px;
+                    padding: 20px;
+                    color: $blue;
+                    font-size: 1.5rem;
                     transition: 0.2s;
+                    padding: 15px;
                     &:hover {
                         background: $blue;
                         color: white;
-                        border: 4px solid black;
                         transition: 0.2s;
+                        margin-bottom: 10px;
+                        border: 4px solid #333;
                     }
                 }
             }
@@ -209,6 +224,9 @@ body {
             margin-top: 100px;
             animation: downarrow 1.5s;
             animation-iteration-count: infinite;
+        }
+        a {
+            overflow: hidden;
         }
     }
     #features, #about, #contact {
@@ -285,12 +303,11 @@ body {
     #contact {
         display: flex;
         background: #e6d68c;
-        width: 100%;
         padding-bottom: 150px;
-        .container {
-            display: flex;
             form {
                 display: flex;
+                justify-content: space-around;
+                width: 50%;
                 i {
                     font-size: 1.6rem;
                 }
@@ -358,24 +375,58 @@ body {
                     }
                 }
             }
-        }
     }
 }
 
 @media only screen and (max-width: 1200px) {
-    img, .navbar {
-        display: none;
+    * {
+        overflow-x: hidden;
+    }
+    #nav-links {
+        display: none !important;
+    }
+    #learnmore {
+        margin-top: 30px;
+    }
+    .feature {
+        margin: 0 !important;
     }
     #home {
         .left {
-            width: 100%;
+            margin-top: 40px;
+            width: 100% !important;
+            justify-content: center !important;
+            text-align: center !important;
             h1 {
-                text-align: center;
-                font-size: 2rem;
+                margin: 0 10px !important;
+                text-align: center !important;
+                font-size: 3rem !important;
             }
         }
         .right {
+            display: none !important;
             width: 0%;
+        }
+    }
+    #features {
+        i {
+            margin-top: 10px !important;
+        }
+    }
+    #contact {
+        justify-content: center;
+        form {
+            width: 92% !important;
+            display: flex;
+            flex-direction: column;
+            #form-details, #form-message {
+                width: 100% !important;
+            }
+            #form-details {
+                .warning {
+                    margin: 20px 0 !important;
+                }
+            }
         }
     }
 }
