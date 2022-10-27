@@ -4,6 +4,29 @@
   text-decoration: none;
 }
 
+@-webkit-keyframes fadeInOut {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -133,6 +156,8 @@ body #home .home-main {
 body #home .home-main .left {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 50%;
 }
 body #home .home-main .left h1 {
@@ -153,6 +178,20 @@ body #home .home-main .left #learn-more:hover {
   color: white;
   transition: 0.2s;
   margin-bottom: 15px;
+}
+body #home .home-main .left a {
+  padding: 20px;
+  font-size: 1.7rem;
+  color: #34A2B8;
+  border: 4px solid #34A2B8;
+  border-radius: 12px;
+  transition: 0.2s;
+}
+body #home .home-main .left a:hover {
+  background: #34A2B8;
+  color: white;
+  border: 4px solid black;
+  transition: 0.2s;
 }
 body #home .home-main .right {
   width: 50%;
@@ -175,7 +214,7 @@ body #home i {
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
 }
-body #features, body #about {
+body #features, body #about, body #contact {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -183,7 +222,7 @@ body #features, body #about {
   align-items: center;
   padding-bottom: 100px;
 }
-body #features h1, body #about h1 {
+body #features h1, body #about h1, body #contact h1 {
   text-align: center;
   font-size: 4rem;
   color: #222;
@@ -191,12 +230,13 @@ body #features h1, body #about h1 {
           animation: fadeInUp 0.5s;
   margin-bottom: 30px;
 }
-body #features .feature-container, body #about .feature-container {
+body #features .feature-container, body #about .feature-container, body #contact .feature-container {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  margin-top: 10px;
 }
-body #features .feature-container .feature, body #about .feature-container .feature {
+body #features .feature-container .feature, body #about .feature-container .feature, body #contact .feature-container .feature {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -206,45 +246,123 @@ body #features .feature-container .feature, body #about .feature-container .feat
   margin-right: 30px;
   margin-left: 30px;
 }
-body #features .feature-container .feature img, body #about .feature-container .feature img {
+body #features .feature-container .feature img, body #about .feature-container .feature img, body #contact .feature-container .feature img {
   height: 120px;
   width: 120px;
   border-radius: 50%;
   margin-bottom: 10px;
   border: 4px solid #81C14B;
 }
-body #features .feature-container .feature i, body #about .feature-container .feature i {
+body #features .feature-container .feature i, body #about .feature-container .feature i, body #contact .feature-container .feature i {
   padding: 20px;
   font-size: 4rem;
   text-align: center;
 }
-body #features .feature-container .feature .fa-comments, body #about .feature-container .feature .fa-comments {
+body #features .feature-container .feature .fa-comments, body #about .feature-container .feature .fa-comments, body #contact .feature-container .feature .fa-comments {
   color: #81C14B;
 }
-body #features .feature-container .feature .fa-magnifying-glass, body #about .feature-container .feature .fa-magnifying-glass {
+body #features .feature-container .feature .fa-magnifying-glass, body #about .feature-container .feature .fa-magnifying-glass, body #contact .feature-container .feature .fa-magnifying-glass {
   color: #34A2B8;
 }
-body #features .feature-container .feature .fa-calendar, body #about .feature-container .feature .fa-calendar {
+body #features .feature-container .feature .fa-calendar, body #about .feature-container .feature .fa-calendar, body #contact .feature-container .feature .fa-calendar {
   color: #2E933C;
 }
-body #features .feature-container .feature .fa-bell, body #about .feature-container .feature .fa-bell {
+body #features .feature-container .feature .fa-bell, body #about .feature-container .feature .fa-bell, body #contact .feature-container .feature .fa-bell {
   color: #35827C;
 }
-body #features .feature-container .feature h1, body #about .feature-container .feature h1 {
+body #features .feature-container .feature h1, body #about .feature-container .feature h1, body #contact .feature-container .feature h1 {
   font-size: 2rem;
   padding-top: 0;
   margin: 0;
   color: #333;
 }
-body #features .feature-container .feature p, body #about .feature-container .feature p {
+body #features .feature-container .feature p, body #about .feature-container .feature p, body #contact .feature-container .feature p {
   text-align: center;
 }
 body #features {
   background: #e6d68c;
+  padding-top: 50px;
 }
 body #about {
   background: #f5e59f;
 }
+body #contact {
+  display: flex;
+  background: #e6d68c;
+  width: 100%;
+}
+body #contact .container {
+  display: flex;
+}
+body #contact .container form {
+  display: flex;
+}
+body #contact .container form i {
+  font-size: 1.6rem;
+}
+body #contact .container form #form-details {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+}
+body #contact .container form #form-details .location, body #contact .container form #form-details .email, body #contact .container form #form-details .phone, body #contact .container form #form-details .website, body #contact .container form #form-details .warning {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+body #contact .container form #form-details .location p, body #contact .container form #form-details .location a, body #contact .container form #form-details .email p, body #contact .container form #form-details .email a, body #contact .container form #form-details .phone p, body #contact .container form #form-details .phone a, body #contact .container form #form-details .website p, body #contact .container form #form-details .website a, body #contact .container form #form-details .warning p, body #contact .container form #form-details .warning a {
+  margin: 0 10px;
+  color: #444;
+}
+body #contact .container form #form-details .fa-map-location-dot {
+  color: rgba(255, 0, 0, 0.73);
+}
+body #contact .container form #form-details .fa-envelope-open-text {
+  color: #34A2B8;
+}
+body #contact .container form #form-details .fa-mobile-screen {
+  color: #222;
+}
+body #contact .container form #form-details .fa-up-right-from-square {
+  color: #2E933C;
+}
+body #contact .container form #form-details .fa-warning {
+  color: rgb(255, 0, 55);
+  -webkit-animation: fadeInOut 1.5s;
+          animation: fadeInOut 1.5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+body #contact .container form #form-details .website a {
+  text-decoration: underline;
+}
+body #contact .container form #form-details .warning {
+  margin-top: 40px;
+}
+body #contact .container form #form-message {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  width: 600px;
+}
+body #contact .container form #form-message input, body #contact .container form #form-message textarea {
+  background: transparent;
+  outline: none;
+  border: 3px solid white;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  padding: 10px;
+  color: #333;
+}
+body #contact .container form #form-message input:focus, body #contact .container form #form-message textarea:focus {
+  border: 3px solid #81C14B;
+}
+body #contact .container form #form-message textarea {
+  margin-top: 10px;
+  resize: vertical;
+  max-height: 300px;
+}
+
 @media only screen and (max-width: 1200px) {
   img, .navbar {
     display: none;

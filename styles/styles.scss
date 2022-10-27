@@ -11,6 +11,18 @@ $darkblue: #35827C;
     text-decoration: none;
 }
 
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+    }
+    30% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -139,6 +151,8 @@ body {
             .left {
                 display: flex;
                 flex-direction: column;
+                justify-content: center;
+                align-items: center;
                 width: 50%;
                 h1 {
                     margin-left: 100px;
@@ -157,6 +171,20 @@ body {
                         color: white;
                         transition: 0.2s;
                         margin-bottom: 15px;
+                    }
+                }
+                a {
+                    padding: 20px;
+                    font-size: 1.7rem;
+                    color:$blue;
+                    border: 4px solid $blue;
+                    border-radius: 12px;
+                    transition: 0.2s;
+                    &:hover {
+                        background: $blue;
+                        color: white;
+                        border: 4px solid black;
+                        transition: 0.2s;
                     }
                 }
             }
@@ -180,7 +208,7 @@ body {
             animation-iteration-count: infinite;
         }
     }
-    #features, #about {
+    #features, #about, #contact {
         width: 100%;
         display: flex;
         flex-direction: column;
@@ -198,6 +226,7 @@ body {
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
+            margin-top: 10px;
             .feature {
                 display: flex;
                 flex-direction: column;
@@ -245,12 +274,86 @@ body {
     }
     #features {
         background: #e6d68c;
+        padding-top: 50px;
     }
     #about {
         background: $beige;
     }
     #contact {
-
+        display: flex;
+        background: #e6d68c;
+        width: 100%;
+        .container {
+            display: flex;
+            form {
+                display: flex;
+                i {
+                    font-size: 1.6rem;
+                }
+                #form-details {
+                    width: 30%;
+                    display: flex;
+                    flex-direction: column;
+                    .location, .email, .phone, .website, .warning {
+                        display: flex;
+                        align-items: center;
+                        margin-bottom: 8px;
+                        p, a {
+                            margin: 0 10px;
+                            color: #444;
+                        }
+                    }
+                    .fa-map-location-dot {
+                        color: rgba(255, 0, 0, 0.73);
+                    }
+                    .fa-envelope-open-text {
+                        color: $blue;
+                    }
+                    .fa-mobile-screen {
+                        color: #222;
+                    }
+                    .fa-up-right-from-square {
+                        color: $green;
+                    }
+                    .fa-warning {
+                        color: rgb(255, 0, 55);
+                        animation: fadeInOut 1.5s;
+                        animation-iteration-count: infinite;
+                    }
+                    .website {
+                        a {
+                            text-decoration: underline;
+                        }
+                    }
+                    .warning {
+                        margin-top: 40px;
+                    }
+                }
+                #form-message {
+                    display: flex;
+                    flex-direction: column;
+                    width: 70%;
+                    width: 600px;
+                    input, textarea {
+                        background: transparent;
+                        outline: none;
+                        border: 3px solid white;
+                        border-radius: 10px;
+                        font-size: 1.2rem;
+                        padding: 10px;
+                        color: #333;
+                        &:focus {
+                            border: 3px solid $lightgreen;
+                        }
+                    }
+                    textarea {
+                        margin-top: 10px;
+                        resize: vertical;
+                        max-height: 300px;
+                    }
+                }
+            }
+        }
     }
 }
 
