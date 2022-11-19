@@ -73,7 +73,7 @@
 /* Works on Firefox */
 * {
   scrollbar-width: thin;
-  scrollbar-color: #34A2B8 #f5e59f;
+  scrollbar-color: #34A2B8 rgb(217, 217, 217);
 }
 
 /* Works on Chrome, Edge, and Safari */
@@ -82,7 +82,7 @@
 }
 
 *::-webkit-scrollbar-track {
-  background: #f5e59f;
+  background: rgb(217, 217, 217);
 }
 
 *::-webkit-scrollbar-thumb {
@@ -120,7 +120,7 @@
 }
 
 body {
-  background: #f5e59f;
+  background: rgb(217, 217, 217);
   display: flex;
   flex-direction: column;
   margin: 0;
@@ -128,7 +128,7 @@ body {
 body .navbar {
   width: 100%;
   display: flex;
-  background: #f5e59f;
+  background: #353535;
   justify-content: space-between;
   position: -webkit-sticky;
   position: sticky;
@@ -160,7 +160,7 @@ body .navbar #nav-links {
 body .navbar #nav-links a {
   display: flex;
   margin-right: 20px;
-  color: #444;
+  color: #fff;
   font-size: 1.3rem;
   font-weight: 500;
   transition: 0.1s;
@@ -208,7 +208,7 @@ body #home .home-main .left #learnmore:hover {
   color: white;
   transition: 0.2s;
   margin-bottom: 10px;
-  border: 4px solid #333;
+  border: 4px solid #353535;
 }
 body #home .home-main .right {
   width: 50%;
@@ -224,7 +224,7 @@ body #home .home-main .right img {
 }
 body #home i {
   font-size: 3rem;
-  color: #333;
+  color: #353535;
   margin-top: 50px;
   padding-bottom: 20px;
   -webkit-animation: downarrow 1.5s;
@@ -247,7 +247,7 @@ body #features, body #about, body #contact {
 body #features h1, body #about h1, body #contact h1 {
   text-align: center;
   font-size: 4rem;
-  color: #222;
+  color: #fff;
   -webkit-animation: fadeInUp 0.5s;
           animation: fadeInUp 0.5s;
   margin-bottom: 30px;
@@ -296,21 +296,28 @@ body #features .feature-container .feature h1, body #about .feature-container .f
   font-size: 2rem;
   padding-top: 0;
   margin: 0;
-  color: #333;
+  color: #fff;
 }
 body #features .feature-container .feature p, body #about .feature-container .feature p, body #contact .feature-container .feature p {
   text-align: center;
+  color: #c8c8c8;
 }
 body #features {
-  background: #e6d68c;
+  background: #353535;
 }
 body #about {
-  background: #f5e59f;
+  background: rgb(217, 217, 217);
+}
+body #about h1, body #about p {
+  color: #353535 !important;
 }
 body #contact {
   display: flex;
-  background: #e6d68c;
+  background: #353535;
   padding-bottom: 150px;
+}
+body #contact h1, body #contact p, body #contact a, body #contact form, body #contact textarea, body #contact input {
+  color: #fff !important;
 }
 body #contact form {
   display: flex;
@@ -372,7 +379,7 @@ body #contact form #form-message input, body #contact form #form-message textare
   border-radius: 10px;
   font-size: 1.2rem;
   padding: 10px;
-  color: #333;
+  color: #353535;
 }
 body #contact form #form-message input:focus, body #contact form #form-message textarea:focus {
   border: 3px solid #81C14B;
@@ -432,7 +439,7 @@ body #contact form #form-message textarea {
 }
 footer {
   padding: 20px;
-  background: #333;
+  background: #222;
   color: white;
   justify-content: center;
   text-align: center;

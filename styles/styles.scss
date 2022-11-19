@@ -1,9 +1,11 @@
-$beige: #f5e59f;
+$beige: rgb(217, 217, 217);
+$darkbeige: #e6d68c;
 $lightgreen: #81C14B;
 $green: #2E933C;
 $blue: #34A2B8;
 $darkblue: #35827C;
-
+$dark: #353535;
+$text-white: #fff;
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400&display=swap');
 
 * {
@@ -127,7 +129,7 @@ body {
     .navbar {
         width: 100%;
         display: flex;
-        background: $beige;
+        background: $dark;
         justify-content: space-between;
         position: sticky;
         top: 0;
@@ -156,7 +158,7 @@ body {
             a {
                 display: flex;
                 margin-right: 20px;
-                color: #444;
+                color: $text-white;
                 font-size: 1.3rem;
                 font-weight: 500;
                 transition: 0.1s;
@@ -202,7 +204,7 @@ body {
                         color: white;
                         transition: 0.2s;
                         margin-bottom: 10px;
-                        border: 4px solid #333;
+                        border: 4px solid $dark;
                     }
                 }
             }
@@ -220,7 +222,7 @@ body {
         }
         i {
             font-size: 3rem;
-            color: #333;
+            color: $dark;
             margin-top: 50px;
             padding-bottom: 20px;
             animation: downarrow 1.5s;
@@ -241,7 +243,7 @@ body {
         h1 {
             text-align: center;
             font-size: 4rem;
-            color: #222;
+            color: $text-white;
             animation: fadeInUp 0.5s;
             margin-bottom: 30px;
         }
@@ -287,95 +289,102 @@ body {
                     font-size: 2rem;
                     padding-top: 0;
                     margin:0;
-                    color: #333;
+                    color: $text-white;
                 }
                 p {
                     text-align: center;
+                    color: #c8c8c8;
                 }
             }
         }
     }
     #features {
-        background: #e6d68c;
+        background: $dark;
     }
     #about {
         background: $beige;
+        h1, p {
+            color: $dark !important;
+        }
     }
     #contact {
         display: flex;
-        background: #e6d68c;
+        background: $dark;
         padding-bottom: 150px;
-            form {
+        h1, p, a, form, textarea, input {
+            color: $text-white !important;
+        }
+        form {
+            display: flex;
+            justify-content: space-around;
+            width: 50%;
+            i {
+                font-size: 1.6rem;
+            }
+            #form-details {
+                width: 30%;
                 display: flex;
-                justify-content: space-around;
-                width: 50%;
-                i {
-                    font-size: 1.6rem;
-                }
-                #form-details {
-                    width: 30%;
+                flex-direction: column;
+                .location, .email, .phone, .website, .warning {
                     display: flex;
-                    flex-direction: column;
-                    .location, .email, .phone, .website, .warning {
-                        display: flex;
-                        align-items: center;
-                        margin-bottom: 8px;
-                        p, a {
-                            margin: 0 10px;
-                            color: #444;
-                        }
-                    }
-                    .fa-map-location-dot {
-                        color: rgba(255, 0, 0, 0.73);
-                    }
-                    .fa-envelope-open-text {
-                        color: $blue;
-                    }
-                    .fa-mobile-screen {
-                        color: #222;
-                    }
-                    .fa-up-right-from-square {
-                        color: $green;
-                    }
-                    .fa-warning {
-                        color: rgb(255, 0, 55);
-                        animation: fadeInOut 1.5s;
-                        animation-iteration-count: infinite;
-                    }
-                    .website {
-                        a {
-                            text-decoration: underline;
-                        }
-                    }
-                    .warning {
-                        margin-top: 40px;
+                    align-items: center;
+                    margin-bottom: 8px;
+                    p, a {
+                        margin: 0 10px;
+                        color: #444;
                     }
                 }
-                #form-message {
-                    display: flex;
-                    flex-direction: column;
-                    width: 70%;
-                    width: 600px;
-                    input, textarea {
-                        background: transparent;
-                        outline: none;
-                        border: 3px solid white;
-                        border-radius: 10px;
-                        font-size: 1.2rem;
-                        padding: 10px;
-                        color: #333;
-                        &:focus {
-                            border: 3px solid $lightgreen;
-                        }
+                .fa-map-location-dot {
+                    color: rgba(255, 0, 0, 0.73);
+                }
+                .fa-envelope-open-text {
+                    color: $blue;
+                }
+                .fa-mobile-screen {
+                    color: #222;
+                }
+                .fa-up-right-from-square {
+                    color: $green;
+                }
+                .fa-warning {
+                    color: rgb(255, 0, 55);
+                    animation: fadeInOut 1.5s;
+                    animation-iteration-count: infinite;
+                }
+                .website {
+                    a {
+                        text-decoration: underline;
                     }
-                    textarea {
-                        margin-top: 10px;
-                        resize: vertical;
-                        max-height: 350px;
-                        min-height: 100px;
-                    }
+                }
+                .warning {
+                    margin-top: 40px;
                 }
             }
+            #form-message {
+                display: flex;
+                flex-direction: column;
+                width: 70%;
+                width: 600px;
+                input, textarea {
+                    background: transparent;
+                    outline: none;
+                    border: 3px solid white;
+                    border-radius: 10px;
+                    font-size: 1.2rem;
+                    padding: 10px;
+                    color: $dark;
+                    &:focus {
+                        border: 3px solid $lightgreen;
+                    }
+                }
+                textarea {
+                    margin-top: 10px;
+                    resize: vertical;
+                    max-height: 350px;
+                    min-height: 100px;
+                }
+            }
+        }
     }
 }
 
@@ -433,7 +442,7 @@ body {
 }
 footer {
     padding: 20px;
-    background: #333;
+    background: #222;
     color: white;
     justify-content: center;
     text-align: center;
