@@ -166,7 +166,7 @@ body .navbar #nav-links a {
   transition: 0.1s;
 }
 body .navbar #nav-links a:hover {
-  color: #2E933C;
+  color: turquoise;
   transition: 0.1s;
   margin-bottom: 5px;
 }
@@ -287,7 +287,7 @@ body #features .feature-container .feature .fa-magnifying-glass, body #about .fe
   color: #34A2B8;
 }
 body #features .feature-container .feature .fa-calendar, body #about .feature-container .feature .fa-calendar, body #contact .feature-container .feature .fa-calendar {
-  color: #2E933C;
+  color: turquoise;
 }
 body #features .feature-container .feature .fa-bell, body #about .feature-container .feature .fa-bell, body #contact .feature-container .feature .fa-bell {
   color: #35827C;
@@ -351,7 +351,7 @@ body #contact form #form-details .fa-mobile-screen {
   color: #222;
 }
 body #contact form #form-details .fa-up-right-from-square {
-  color: #2E933C;
+  color: turquoise;
 }
 body #contact form #form-details .fa-warning {
   color: rgb(255, 0, 55);
