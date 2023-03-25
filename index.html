@@ -19,7 +19,7 @@
             <div id="nav-links">
                 <a class="nav-link" href="#home">Home</a>
                 <a class="nav-link" href="#features">Features</a>
-                <a class="nav-link" href="#about">About</a>
+                <a style="opacity: 0.4" class="nav-link" href="#about">About</a>
                 <a class="nav-link" href="#contact">Contact Us</a>
             </div>
         </div>
@@ -28,7 +28,7 @@
                 <div class="home-main">
                     <div class="left">
                         <h1 class="fadeInUp">Find the perfect roommates.</h1>
-                        <a id="learnmore" href="#features">Learn More</a>
+                        <a id="learnmore" href="#features">Explore Features</a>
                     </div>
                     <div class="right">
                         <img class="fadeInUp" src="img/landing-img.png">
@@ -39,46 +39,90 @@
                 </a>
             </div>
             <div id="features">
-                <h1>Features</h1>
                 <div class="feature-container container">
                     <div class="feature">
-                        <i class="fa-regular fa-comments"></i>
-                        <h1>Messaging</h1>
-                        <p>
-                            This is some funny haha filler text meant
-                            to simulate actual meaningful text being displayed
-                            in this specific spot.
-                        </p>
+                        <div class="details right">
+                            <h1>Roommate Finder</h1>
+                            <p>
+                                Our roommate finder feature is the main event! Carefully catered
+                                to make finding you the best room as easy and stress-free as possible.
+                                <br><br>By filtering through ZIP code, area radius, gender, budget, and
+                                more, you can find exactly what you're looking for and chat with 
+                                potential roommates once you've found a good match.
+                            </p>
+                            <div class="link">
+                                <a class="blue-btn" href="#create-listing">Create a Listing</a>
+                            </div>
+                        </div>
+                        <div class="video-container">
+                            <video height="600" autoplay="autoplay" loop muted>
+                                <source src="video/finder-filter-view.mp4" type="video/mp4" />
+                            </video>
+                        </div>
                     </div>
-                    <div class="feature">
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                        <h1>Roommate Finder</h1>
-                        <p>
-                            This is some funny haha filler text meant
-                            to simulate actual meaningful text being displayed
-                            in this specific spot.
-                        </p>
+                    <div id="create-listing" class="feature mt-80" style="margin-top: 80px">
+                        <div class="video-container">
+                            <video height="600" autoplay="autoplay" loop muted>
+                                <source src="video/create-listing.mp4" type="video/mp4" />
+                            </video>
+                        </div>
+                        <div class="details left">
+                            <h1>Create a Listing</h1>
+                            <p>
+                                Our roommate finder feature is the main event! Carefully catered
+                                to make finding you the best room as easy and stress-free as possible.
+                                <br><br>By filtering through ZIP code, area radius, gender, budget, and
+                                more, you can find exactly what you're looking for and chat with 
+                                potential roommates once you've found a good match.
+                            </p>
+                            <div class="link">
+                                <a class="blue-btn" href="#chat">Chat with Others</a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="feature">
-                        <i class="fa-regular fa-calendar"></i>
-                        <h1>Calendar</h1>
-                        <p>
-                            This is some funny haha filler text meant
-                            to simulate actual meaningful text being displayed
-                            in this specific spot.
-                        </p>
+                    <div id="chat" class="feature mt-80" style="margin-top: 80px">
+                        <div class="details right">
+                            <h1>Chat with Others</h1>
+                            <p>
+                                Our roommate finder feature is the main event! Carefully catered
+                                to make finding you the best room as easy and stress-free as possible.
+                                <br><br>By filtering through ZIP code, area radius, gender, budget, and
+                                more, you can find exactly what you're looking for and chat with 
+                                potential roommates once you've found a good match.
+                            </p>
+                            <div class="link">
+                                <a class="blue-btn" href="#preferences">Set Preferences</a>
+                            </div>
+                        </div>
+                        <div class="video-container">
+                            <video height="600" autoplay="autoplay" loop muted>
+                                <source src="video/chat.mp4" type="video/mp4" />
+                            </video>
+                        </div>
                     </div>
-                    <div class="feature">
-                        <i class="fa-regular fa-bell"></i>
-                        <h1>Reminders</h1>
-                        <p>
-                            This is some funny haha filler text meant
-                            to simulate actual meaningful text being displayed
-                            in this specific spot.
-                        </p>
+                    <div id="preferences" class="feature" style="margin-top: 80px">
+                        <div class="video-container">
+                            <video height="600" autoplay="autoplay" loop muted>
+                                <source src="video/preferences.mp4" type="video/mp4" />
+                            </video>
+                        </div>
+                        <div class="details left">
+                            <h1>Set Preferences</h1>
+                            <p>
+                                Our roommate finder feature is the main event! Carefully catered
+                                to make finding you the best room as easy and stress-free as possible.
+                                <br><br>By filtering through ZIP code, area radius, gender, budget, and
+                                more, you can find exactly what you're looking for and chat with 
+                                potential roommates once you've found a good match.
+                            </p>
+                            <div class="link">
+                                <a class="blue-btn" href="#contact">Contact Us</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
+            <!--
             <div id="about">
                 <h1>About Us</h1>
                 <div class="feature-container container">
@@ -102,8 +146,10 @@
                     </div>
                 </div>
             </div>
+        -->
             <div id="contact">
                 <h1>Contact Us</h1>
+                <div class="form-container">
                     <form>
                         <div id="form-details">
                             <div class="location">
@@ -120,7 +166,7 @@
                             </div>
                             <div class="website">
                                 <i class="fa-solid fa-up-right-from-square"></i>
-                                <a href="https://loud-backspace.github.io/" target="_blank">Visit our Website</a>
+                                <a href="https://loud-backspace.github.io/" target="_blank">Visit our GitHub</a>
                             </div>
                             <div class="warning">
                                 <i class="fa-solid fa-warning"></i>
@@ -130,8 +176,10 @@
                         <div id="form-message">
                             <input maxlength="250" placeholder="Subject">
                             <textarea placeholder="Your message here" rows="6"></textarea>
+                            <a id="submit" href="#">Submit Message</a>
                         </div>
                     </form>
+                </div>
             </div>
             <footer>Copyright 2022-2023 &copy; <a href="https://github.com/loud-backspace" target="_blank">Team Loud Backspace</a></footer>
         </div>
